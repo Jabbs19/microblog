@@ -15,6 +15,7 @@ COPY microblog.py config.py boot.sh ./
 RUN chmod a+x boot.sh
 
 ENV FLASK_APP microblog.py
+ENV FORCE_BUILD=1
 
 RUN chown -R microblog:microblog ./
 USER microblog
